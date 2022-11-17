@@ -1,6 +1,6 @@
 ### Name - Akshay kumar.
 
-# Project Title - API for getting total balance of a list of address.
+# Project Title - API for getting the total balance of a list of addresses..
 
 > ### Dependencies and steps on how to install
 
@@ -13,13 +13,14 @@ Production dependencies
 
 > ### Steps to install
 
-1. Fork the project using this link
-2. run - npm install
-3. run - npm run start (optional - PORT env var can be added)
+1. Clone the project using this link- https://github.com/aks-bhatia/Ethereum_Blockchain_Test.git
+2. Use node version 16 or above.
+3. Run command - npm install
+4. Run command - npm run start (by default runs on port 4001)
 
    For testing api i have temporarily added etherscan api key to the endpoint. Dotenv can be used in development environment to manage multiple keys. In production environment this need to be replaced with env variables.
 
-4. using postman run a post command
+5. using postman run a post command
    http://localhost:4001/api/balance/getTotalBalance_MultiAddress
    and pass JSON object containing the addresses
 
@@ -37,7 +38,7 @@ Production dependencies
 
 To run tests use the command - npm run test
 
-To run server in development mode - npm run start-dev
+To run server in development mode using nodemon- npm run start-dev
 
 To build the project - npm run build
 

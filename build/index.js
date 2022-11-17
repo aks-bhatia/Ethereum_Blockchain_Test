@@ -10,4 +10,6 @@ const PORT = process.env.PORT || 4001;
 app.use(express_1.default.json({ limit: "5000KB" }));
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use("/api", global_routes_1.default);
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(PORT);
+});

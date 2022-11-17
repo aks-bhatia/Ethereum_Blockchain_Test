@@ -47,6 +47,7 @@ const getTotalBalanceMultiAddress = (req, res) => __awaiter(void 0, void 0, void
         }
     }
     catch (e) {
+        //improvement - logs can be  stored in redis.
         return res.status(400).send({ status: 400, message: e.message });
     }
 });
