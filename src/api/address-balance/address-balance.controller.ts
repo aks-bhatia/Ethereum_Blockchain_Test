@@ -10,7 +10,7 @@ export const getTotalBalanceMultiAddress = async (req: any, res: any) => {
     return res.status(400).json({ message: "Address not provided" });
   if (req.body.addresses.length > 100) {
     return res.status(400).json({
-      message: "Reached address limit. 100 addresses can only be added.",
+      message: "Reached address limit.Only 100 addresses allowed.",
     });
   }
   try {

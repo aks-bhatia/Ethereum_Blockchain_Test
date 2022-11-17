@@ -1,6 +1,8 @@
 import axios from "axios";
 export const getBalanceMultiAddress = async (addressesArray: string[]) => {
   const Addresses = addressesArray.toString();
+
+  //hardcoded api key just for testing purpose. To improve this dotenv can be used for development.
   const URL =
     "https://api-goerli.etherscan.io//api?module=account&action=balancemulti" +
     "&address=" +
