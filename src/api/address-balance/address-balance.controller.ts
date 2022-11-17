@@ -50,12 +50,12 @@ const generateTotalBalanceResponse = (
   accountBalances: { account: string; balance: string }[]
 ): TotalBalanceResponse => {
   let DataResponse: TotalBalanceResponse = { addresses: [], totalBalance: 0 };
-  for (let balance of accountBalances) {
+  for (let accountDetail of accountBalances) {
     DataResponse.addresses?.push({
-      address: balance.account,
-      balance: parseInt(balance.balance),
+      address: accountDetail.account,
+      balance: parseFloat(accountDetail.balance),
     });
-    DataResponse.totalBalance += parseInt(balance.balance);
+    DataResponse.totalBalance += parseFloat(accountDetail.balance);
   }
   return DataResponse;
 };
