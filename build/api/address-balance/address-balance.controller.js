@@ -60,12 +60,12 @@ exports.getTotalBalanceMultiAddress = getTotalBalanceMultiAddress;
 const generateTotalBalanceResponse = (accountBalances) => {
     var _a;
     let DataResponse = { addresses: [], totalBalance: 0 };
-    for (let balance of accountBalances) {
+    for (let accountDetail of accountBalances) {
         (_a = DataResponse.addresses) === null || _a === void 0 ? void 0 : _a.push({
-            address: balance.account,
-            balance: parseInt(balance.balance),
+            address: accountDetail.account,
+            balance: parseFloat(accountDetail.balance),
         });
-        DataResponse.totalBalance += parseInt(balance.balance);
+        DataResponse.totalBalance += parseFloat(accountDetail.balance);
     }
     return DataResponse;
 };
